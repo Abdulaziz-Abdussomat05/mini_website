@@ -1,0 +1,81 @@
+header {
+  padding: 15px;
+  .header__container {
+    input,label {
+      display: none;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 35px;
+      font-weight: 800;
+      a {
+        color: black;
+        &:hover {
+          color: crimson;
+          transition: all ease 1s ;
+        }
+      }
+    }
+    .links {
+      a {
+        margin-right: 25px;
+        color: rgb(135, 5, 5);
+        font-size: 18px;
+        font-weight: 600;
+        &:hover {
+          color: darkblue;
+          transition: all ease 1s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .links {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all ease-in .5s;
+    .checkX {
+      position: absolute;
+      display: block;
+      top: 5%;
+      right: 5%;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+    a {
+      text-align: center;
+      display: block;
+      margin-top: 30px;
+      
+    }
+   
+  }
+header {
+  .header__container {
+    
+    label,i {
+      display: block;
+      font-size: 25px;
+      color: brown;
+      cursor: pointer;
+    }
+    #check:checked ~ {
+      .links {
+        left: -0%;
+        
+      }
+    }
+  }
+}
+}
